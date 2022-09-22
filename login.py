@@ -29,10 +29,13 @@ def sign():    #打卡函數
 
     """
     以下登入指定網頁
+    
     """
-    driver.find_element(By.ID,'username').send_keys(xuehao)#帳號
+    username='' #帳號
+    password='' #密碼
+    driver.find_element(By.ID,'username').send_keys(username)
     slp()
-    driver.find_element(By.ID,'pwd').send_keys(mima)#密碼
+    driver.find_element(By.ID,'pwd').send_keys(password)
     slp()
     driver.find_element(By.CLASS_NAME, 'loginBtn').click()#點登入按鈕
     slp()

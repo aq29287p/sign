@@ -17,7 +17,7 @@ from email.mime.text import MIMEText
 import smtplib
 from selenium.webdriver.common.by import By
 def slp():
-    sleep(random.randint(2,5))#隨機延遲函數
+    sleep(random.randint(2,5))#延遲函數
 
 
 

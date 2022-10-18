@@ -20,11 +20,13 @@ def slp():
     sleep(random.randint(2,5))#延遲函數
 
 
-
+#輸入打卡網頁
+URL= enter your website
+    
 def sign():    #打卡函數
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) #每次更新chrome driver
     driver.maximize_window()#窗口最大化
-    driver.get("https://paperless.cycu.edu.tw/#/login")#打卡
+    driver.get(URL)#打卡
     slp()#調用延遲函數 等待打卡網站加載
 
     """

@@ -22,7 +22,7 @@ def slp():
 
 #輸入打卡網頁
 URL= enter your website
-    
+email = enter your email
 def sign():    #打卡函數
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) #每次更新chrome driver
     driver.maximize_window()#窗口最大化
@@ -59,8 +59,8 @@ def send_mail():
 
     content = MIMEMultipart()  #建立MIMEMultipart物件
     content["subject"] = "簽到打卡"  #郵件標題
-    content["from"] = "a13579230@gmail.com"  #寄件者
-    content["to"] = "a13579230@gmail.com" #收件者
+    content["from"] = email  #寄件者
+    content["to"] = email #收件者
     content.attach(MIMEText("ok"))  #郵件內容
     with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:  # 設定SMTP伺服器
 
